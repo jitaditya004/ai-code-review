@@ -1,0 +1,30 @@
+mkdir ai-code-reviewer
+cd ai-code-reviewer
+
+mkdir backend
+cd backend
+
+python -m venv .venv
+
+
+
+Ahh, I see the issue! 😄 You're using Git Bash, not Command Prompt/PowerShell.
+
+In Git Bash, Windows backslashes \ don't work the same way. Use forward slashes:
+
+source .venv/Scripts/activate
+
+
+
+
+pip install fastapi uvicorn pydantic-settings
+
+
+
+uvicorn app.main:app --reload
+
+
+POST /webhooks/github
+
+
+pip install sqlalchemy asyncpg alembic
